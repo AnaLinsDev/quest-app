@@ -1,4 +1,7 @@
-
+export { default as CommonMenu } from '../..\\components\\common\\menu.vue'
+export { default as CommonSideBar } from '../..\\components\\common\\side-bar.vue'
+export { default as UserLoginForm } from '../..\\components\\user\\login-form.vue'
+export { default as UserRegisterForm } from '../..\\components\\user\\register-form.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

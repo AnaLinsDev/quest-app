@@ -3,12 +3,15 @@ export default {
   target: 'static',
 
   router: {
-    base: '/quest-app/'
+    base: '/quest-app/',
+    middleware: ['auth']
   },
 
   ssr: false,
 
   components: true,
+
+  css:['@/assets/css/global.css'],
   
   buildModules: [
     '@nuxtjs/vuetify',

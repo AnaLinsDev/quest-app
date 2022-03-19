@@ -1,1 +1,14 @@
-{}
+{
+  "CommonMenu": {
+    "description": "Auto imported from components/common/menu.vue"
+  },
+  "CommonSideBar": {
+    "description": "Auto imported from components/common/side-bar.vue"
+  },
+  "UserLoginForm": {
+    "description": "Auto imported from components/user/login-form.vue"
+  },
+  "UserRegisterForm": {
+    "description": "Auto imported from components/user/register-form.vue"
+  }
+}
