@@ -1,2 +1,1 @@
-yarn json-servtop\Vue\quest-app-er --watch data/db.json --port 
-8000
+yarn json-server --watch data/db.json --port 8000

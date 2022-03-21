@@ -6,7 +6,9 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _c999fdaa = () => interopDefault(import('..\\pages\\configQuiz.vue' /* webpackChunkName: "pages/configQuiz" */))
 const _803afab6 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _6ac76576 = () => interopDefault(import('..\\pages\\quests.vue' /* webpackChunkName: "pages/quests" */))
 const _d2db4fd2 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
+const _4d9c34e6 = () => interopDefault(import('..\\pages\\userInfo.vue' /* webpackChunkName: "pages/userInfo" */))
 const _138a40e4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -29,9 +31,17 @@ export const routerOptions = {
     component: _803afab6,
     name: "login"
   }, {
+    path: "/quests",
+    component: _6ac76576,
+    name: "quests"
+  }, {
     path: "/register",
     component: _d2db4fd2,
     name: "register"
+  }, {
+    path: "/userInfo",
+    component: _4d9c34e6,
+    name: "userInfo"
   }, {
     path: "/",
     component: _138a40e4,

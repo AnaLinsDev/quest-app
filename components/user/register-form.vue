@@ -23,6 +23,7 @@
 
         <v-text-field
           v-model="password"
+          :rules="passwordRules"
           label="Password"
           type="password"
           required
@@ -32,7 +33,7 @@
           :disabled="!valid"
           color="success"
           class="mr-4"
-          @click="register"
+          @click="registerUser"
         >
           register
         </v-btn>
@@ -49,19 +50,25 @@
 
 
 <script>
+  import {mapActions} from 'vuex'
+
   export default {
     data: () => ({
       registerAsGuest: false,
       valid: true,
 
-      password: '', 
+      password: 'tests', 
+      username: 'test',
+      email: 'test@gmail.com',
 
-      username: '',
       usernameRules: [
         v => !!v || 'Name is required',
         v => (v && v.length <= 10) || 'Name must be less than 10 characters',
       ],
-      email: '',
+      passwordRules: [
+        v => !!v || 'Password is required',
+        v => (v && v.length >= 5) || 'Password must be more than 5 characters',
+      ],
       emailRules: [
         v => !!v || 'E-mail is required',
         v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
@@ -69,9 +76,15 @@
     }),
 
     methods: {
-      register () {
+      ...mapActions('user', ['register']),
+      async registerUser () {
         this.$refs.form.validate()
-        // fazer req vuex
+        await this.register({
+          name: this.username,
+          email: this.email,
+          password: this.password
+        })
+        this.$router.push('/configQuiz')
       },
 
     },

@@ -3,37 +3,38 @@
     {
       "name": "Ana",
       "email": "ana@gmail.com",
-      "password": "123",
+      "password": "12345",
       "id": 0
-    },
-    {
-      "name": "Mario",
-      "email": "mario@gmail.com",
-      "password": "321",
-      "id": 1
     }
   ],
-  
   "quest_config": {
-      "amount": [5, 10, 15, 20, 25, 30],
-      "category": [
-        {"Any": false},
-        {"Art": 25},
-        {"Books": 10},
-        {"Film": 11},
-        {"Music": 12},
-        {"Video Game": 15}
-      ],
-      "difficulty": [
-        {"Any": false},
-        {"Easy": "easy"},
-        {"Medium": "medium"},
-        {"Hard": "hard"}
-      ],
-      "type": [
-        {"Any": false},
-        {"Multiple Choice": "multiple"},
-        {"True or False": "boolean"}
-      ]
-    }
+    "amount": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "category": {
+        "Any": 0,
+        "Art": 25,
+        "Books": 10,
+        "Film": 11,
+        "Music": 12,
+        "Video Game": 15
+    },
+    "difficulty": {
+        "Any": 0,
+        "Easy": "easy",
+        "Medium": "medium",
+        "Hard": "hard"
+      },
+
+    "type": {
+        "Any": 0,
+        "Multiple Choice": "multiple",
+        "True or False": "boolean"
+      }
+  }
 }

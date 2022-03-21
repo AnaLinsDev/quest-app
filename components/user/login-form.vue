@@ -81,8 +81,8 @@
     data: () => ({
       isGuest: false,
       valid: true,
-      password:'',
-      username: '',
+      password: '12345', 
+      username: 'Ana',
 
       usernameRules: [
         v => !!v || 'Name is required',
@@ -109,13 +109,14 @@
 
     methods: {
       ...mapActions('user',['login', 'loginAsGuest']),
-      loginUser(){ 
-        console.log(this.valid)
+      async loginUser(){ 
         if(this.isGuest){  
-          this.loginAsGuest({ name: this.username })
+          await this.loginAsGuest({ 
+            name: this.username 
+          })
         }
         else{
-          this.login({
+          await this.login({
             name: this.username,
             password: this.password
           })

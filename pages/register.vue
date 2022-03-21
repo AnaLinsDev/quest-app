@@ -9,7 +9,7 @@
 <script>
   import RegisterForm from '@/components/user/register-form.vue'
   export default {
-    components:{RegisterForm}
+    components:{ RegisterForm }
   }
 
 </script>

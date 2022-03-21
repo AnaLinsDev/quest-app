@@ -12,15 +12,43 @@ let store = {};
 
   // If store is an exported method = classic mode (deprecated)
 
+  if (typeof store === 'function') {
+    return console.warn('Classic mode for store/ is deprecated and will be removed in Nuxt 3.')
+  }
+
   // Enforce store modules
   store.modules = store.modules || {}
 
+  resolveStoreModules(require('..\\store\\modules\\quiz\\actions.js'), 'modules/quiz/actions.js')
+  resolveStoreModules(require('..\\store\\modules\\quiz\\mutations.js'), 'modules/quiz/mutations.js')
+  resolveStoreModules(require('..\\store\\modules\\quiz\\quiz.js'), 'modules/quiz/quiz.js')
+  resolveStoreModules(require('..\\store\\modules\\quiz\\state.js'), 'modules/quiz/state.js')
   resolveStoreModules(require('..\\store\\modules\\user\\actions.js'), 'modules/user/actions.js')
   resolveStoreModules(require('..\\store\\modules\\user\\mutations.js'), 'modules/user/mutations.js')
   resolveStoreModules(require('..\\store\\modules\\user\\state.js'), 'modules/user/state.js')
   resolveStoreModules(require('..\\store\\modules\\user\\user.js'), 'modules/user/user.js')
 
   // If the environment supports hot reloading...
+
+  if (process.client && module.hot) {
+    // Whenever any Vuex module is updated...
+    module.hot.accept([
+      '..\\store\\index.js',
+      '..\\store\\modules\\quiz\\actions.js',
+      '..\\store\\modules\\quiz\\mutations.js',
+      '..\\store\\modules\\quiz\\quiz.js',
+      '..\\store\\modules\\quiz\\state.js',
+      '..\\store\\modules\\user\\actions.js',
+      '..\\store\\modules\\user\\mutations.js',
+      '..\\store\\modules\\user\\state.js',
+      '..\\store\\modules\\user\\user.js',
+    ], () => {
+      // Update `root.modules` with the latest definitions.
+      updateModules()
+      // Trigger a hot update in the store.
+      window.$nuxt.$store.hotUpdate(store)
+    })
+  }
 })()
 
 // createStore

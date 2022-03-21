@@ -1,35 +1,47 @@
 <template>
   <v-card class="overflow-hidden">
     <v-app-bar
+      v-if="!loggedIn"
       absolute
       color="white"
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Title</v-toolbar-title>
-
+      <v-toolbar-title>Quiz App</v-toolbar-title>
       <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
       <v-btn 
-      v-if="!loggedIn"
       color="white"
       to="/login"
       depressed>
         Login
       </v-btn>
 
-      <v-btn 
+    </v-app-bar>
+
+    <v-app-bar
       v-else
+      absolute
+      color="white"
+      elevate-on-scroll
+      scroll-target="#scrolling-techniques-7"
+    >
+
+      <v-toolbar-title>Quiz App</v-toolbar-title>
+      <v-spacer></v-spacer>
+
+      <v-btn icon color="purple darken-2"
+      to="/configQuiz">
+        <v-icon>mdi-cog-play</v-icon>
+      </v-btn>
+
+      <v-btn icon color="purple darken-2"
+      to="/userInfo">
+        <v-icon>mdi-account</v-icon>
+      </v-btn>
+
+      <v-btn 
       color="white"
       @click="logoutUser"
       depressed>
@@ -51,6 +63,7 @@
 
 <script>
   import { mapState, mapActions } from 'vuex'
+
   export default {
     computed: mapState('user', {
       loggedIn: state => state.loggedIn

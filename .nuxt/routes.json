@@ -14,11 +14,25 @@
     "_name": "_803afab6"
   },
   {
+    "name": "quests",
+    "path": "/quests",
+    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\quests.vue",
+    "chunkName": "pages/quests",
+    "_name": "_6ac76576"
+  },
+  {
     "name": "register",
     "path": "/register",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\register.vue",
     "chunkName": "pages/register",
     "_name": "_d2db4fd2"
+  },
+  {
+    "name": "userInfo",
+    "path": "/userInfo",
+    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\userInfo.vue",
+    "chunkName": "pages/userInfo",
+    "_name": "_4d9c34e6"
   },
   {
     "name": "index",
