@@ -94,7 +94,7 @@ export default {
 
   data(){
     return{
-      amount: 10,
+      amount: 5,
       type:"Any",
       difficulty:"Any",
       category:"Any",

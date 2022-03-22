@@ -34,18 +34,9 @@
     
 
     <div class="container-btns">
-      <v-btn
-        depressed
-        large
-        color="warning"
-        @click="backQuest()"
-      >
-        <v-icon>
-          mdi-arrow-left
-        </v-icon>
-        Back
-      </v-btn>
-      <v-btn
+
+       <v-btn
+        v-if="quests.length > questNumber && answerFinal != ''"
         depressed
         large
         color="primary"
@@ -56,15 +47,24 @@
           mdi-arrow-right
         </v-icon>
       </v-btn>
-    </div>
 
+      <v-btn
+        v-if="quests.length == questNumber && answerFinal != ''"
+        depressed
+        large
+        color="primary"
+        to="/dashboard"
+      >
+        Finish
+      </v-btn>
+    </div>
     </div>
 
   </div>
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import {mapState, mapActions} from 'vuex'
 
 export default {
 
@@ -74,31 +74,51 @@ export default {
       answerTrue: '',
       answerFinal:'',
       isRight: '',
-      isAnswered: ''
+      isAnswered: '',
+      localProgress: {
+        right: 0,
+        wrong: 0, 
+        total: 0
+      }
     }
   },
 
   methods:{
-    nextQuest(){
+    ...mapActions('quiz',['setProgress']),
+
+    resetSomeData(){
       this.answerTrue = ''
       this.answerFinal = ''
       this.isRight = ''
       this.isAnswered = ''
+    },
+    
+    randOrd() {
+    return (Math.round(Math.random())-0.5);
+    },
+
+    nextQuest(){
+      this.resetSomeData()
       this.questNumber != this.quests.length ? this.questNumber++ : ''
     },
 
-    backQuest(){
-      this.answerTrue = ''
-      this.answerFinal = ''
-      this.isRight = ''
-      this.isAnswered = ''
-      this.questNumber != 1 ? this.questNumber-- : ''
-
-    },
     selectAnswer(value){
+
       this.isAnswered = true
-      this.answerFinal == '' ? this.answerFinal = value : ''
-      this.isRight = this.answerTrue == value ? true : false
+      let actAux = {}
+
+      if (this.answerFinal == ''){ 
+
+        this.answerFinal = value 
+        this.isRight = this.answerTrue == this.answerFinal ? true : false
+        
+        this.localProgress.total = this.quests.length
+        this.isRight ? this.localProgress.right++ : this.localProgress.wrong++
+
+        actAux = this.localProgress
+        this.setProgress(actAux)
+        }
+
     }
   },
 
@@ -116,8 +136,13 @@ export default {
       this.answerTrue = this.currentQuest.correct_answer
       allList.push( this.currentQuest.correct_answer )
       allList.push(...this.currentQuest.incorrect_answers)
+      allList.sort()
       return allList
     }
+  },
+
+  mounted(){
+    this.setProgress(this.localProgress)
   }
 }
 </script>
@@ -207,10 +232,32 @@ export default {
     border: none;
   }
 
+  .flip-enter-active {
+    animation: flip-in 0.3s ease forwards;
+  }
+
+  .flip-leave-active {
+    animation: flip-out 0.3s ease forwards;
+  }
+
+  @keyframes flip-out {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(90deg); }
+  }
+
+  @keyframes flip-in {
+    from { transform: rotateY(90deg); }
+    to { transform: rotateY(0deg); }
+  }
+
   button{
     position: fixed;
     bottom: 0px;
     right: 0px; 
+  }
+
+  button:active{
+    animation: loading 2s linear infinite;
   }
 
   .right{

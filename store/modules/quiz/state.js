@@ -2,7 +2,7 @@ export default () => ({
   isUserConfig: false,
   questsGenerated: [],
   
-  progress:{right: 0, wrong: 0, pass: 0, total: 0},
+  progress:{},
 
   list_config: [
     [  []  ,  []  ]   ,   [  []  ,  []  ],

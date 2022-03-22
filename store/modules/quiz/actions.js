@@ -18,6 +18,10 @@ export default {
     commit('setConfig', config)
 	},
 
+  async setProgress({commit}, info){
+    commit('setProgress', info)
+	},
+
   async povoateQuests({commit, state}, configFinal){
     let data 
     let amount = configFinal.amount

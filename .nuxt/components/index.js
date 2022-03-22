@@ -1,3 +1,7 @@
+export { default as ChartsFinalQuestDashResult } from '../..\\components\\charts-final\\quest-dash-result.vue'
+export { default as ChartsFinalQuestDashRight } from '../..\\components\\charts-final\\quest-dash-right.vue'
+export { default as ChartsSchemaDoughnut } from '../..\\components\\charts-schema\\doughnut.vue'
+export { default as ChartsSchemaPie } from '../..\\components\\charts-schema\\pie.vue'
 export { default as CommonMenu } from '../..\\components\\common\\menu.vue'
 export { default as CommonSideBar } from '../..\\components\\common\\side-bar.vue'
 export { default as UserLoginForm } from '../..\\components\\user\\login-form.vue'

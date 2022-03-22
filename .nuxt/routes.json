@@ -3,42 +3,42 @@
     "name": "configQuiz",
     "path": "/configQuiz",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\configQuiz.vue",
-    "chunkName": "pages/configQuiz",
-    "_name": "_c999fdaa"
+    "chunkName": "pages/configQuiz"
+  },
+  {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\dashboard.vue",
+    "chunkName": "pages/dashboard"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\login.vue",
-    "chunkName": "pages/login",
-    "_name": "_803afab6"
+    "chunkName": "pages/login"
   },
   {
     "name": "quests",
     "path": "/quests",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\quests.vue",
-    "chunkName": "pages/quests",
-    "_name": "_6ac76576"
+    "chunkName": "pages/quests"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\register.vue",
-    "chunkName": "pages/register",
-    "_name": "_d2db4fd2"
+    "chunkName": "pages/register"
   },
   {
     "name": "userInfo",
     "path": "/userInfo",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\userInfo.vue",
-    "chunkName": "pages/userInfo",
-    "_name": "_4d9c34e6"
+    "chunkName": "pages/userInfo"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_138a40e4"
+    "chunkName": "pages/index"
   }
 ]

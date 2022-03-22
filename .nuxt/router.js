@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _c999fdaa = () => interopDefault(import('..\\pages\\configQuiz.vue' /* webpackChunkName: "pages/configQuiz" */))
+const _6784be50 = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
 const _803afab6 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
 const _6ac76576 = () => interopDefault(import('..\\pages\\quests.vue' /* webpackChunkName: "pages/quests" */))
 const _d2db4fd2 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
@@ -26,6 +27,10 @@ export const routerOptions = {
     path: "/configQuiz",
     component: _c999fdaa,
     name: "configQuiz"
+  }, {
+    path: "/dashboard",
+    component: _6784be50,
+    name: "dashboard"
   }, {
     path: "/login",
     component: _803afab6,

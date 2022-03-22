@@ -1,4 +1,16 @@
 {
+  "ChartsFinalQuestDashResult": {
+    "description": "Auto imported from components/charts-final/quest-dash-result.vue"
+  },
+  "ChartsFinalQuestDashRight": {
+    "description": "Auto imported from components/charts-final/quest-dash-right.vue"
+  },
+  "ChartsSchemaDoughnut": {
+    "description": "Auto imported from components/charts-schema/doughnut.vue"
+  },
+  "ChartsSchemaPie": {
+    "description": "Auto imported from components/charts-schema/pie.vue"
+  },
   "CommonMenu": {
     "description": "Auto imported from components/common/menu.vue"
   },
