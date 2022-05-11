@@ -1,5 +1,6 @@
 <template>
-  <div class="main-login">
+  <div class="main-login d-flex flex-column">
+    <h1 class="title_quiz">QUIZ GAME</h1>
     <div class="login-card">
       <LoginForm />
     </div>
@@ -15,16 +16,14 @@
 </script>
 
 <style>
-  .main-login{
-    display: flex;
-    justify-content: center;
-    margin: 80px auto;
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+  .main-login {
+    max-width: 500px;
+    margin: 20px auto;
   }
-  .login-card{
-    height: auto;
-    width: 500px;
+  .login-card {
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0 0 1em rgb(202, 200, 200);
   }
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <v-card class="overflow-hidden">
+  <v-card class="overflow-hidden menu">
     <v-app-bar
       v-if="!loggedIn"
       absolute
@@ -8,7 +8,7 @@
       scroll-target="#scrolling-techniques-7"
     >
 
-      <v-toolbar-title>Quiz App</v-toolbar-title>
+      <v-toolbar-title>Quiz Game</v-toolbar-title>
       <v-spacer></v-spacer>
 
       <v-btn 
@@ -84,5 +84,8 @@
       padding: 0px ;
       margin: 0px;
       max-width: 100vw !important;
+  }
+  .menu {
+    margin-bottom: 20px;
   }
 </style>

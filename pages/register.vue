@@ -1,5 +1,6 @@
 <template>
-  <div class="main-register">
+  <div class="main-register d-flex flex-column">
+    <h1 class="title_quiz">QUIZ GAME</h1>
     <div class="register-card">
       <RegisterForm />
     </div>
@@ -16,9 +17,8 @@
 
 <style>
   .main-register{
-    display: flex;
-    justify-content: center;
-    margin: 80px auto;
+    max-width: 500px;
+    margin: 20px auto;
   }
   .register-card{
     height: auto;

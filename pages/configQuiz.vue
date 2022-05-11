@@ -2,8 +2,8 @@
   <div>
 
     <h1 class="center">
-      <span v-if="!userConfig"> Default Config Quiz</span> 
-      <span v-else > User Config Quiz</span> 
+      <span v-if="!userConfig"> Configuration Quiz</span> 
+      <span v-else > User Configuration Quiz</span> 
     </h1>
 
     <div class="resume-quiz-config">
@@ -190,6 +190,13 @@ export default {
     padding: 50px 100px;
     background-color: white;
     border: 1px solid black;
+  }
+
+  @media (max-width: 600px){
+    .resume-quiz-config{
+      margin: 0px;
+      padding: 10px;
+    }
   }
 
 </style>

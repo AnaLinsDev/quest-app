@@ -1,9 +1,9 @@
 const axios = require('axios');
-const url = 'http://localhost:8000'
+const url = 'http://localhost:3000'
 
 export default {
   async login({commit}, user) {
-    let data 
+    let data = []
     let userApiData
 
     await axios.get( url + '/users')
@@ -14,12 +14,15 @@ export default {
 
     // essa parte não iria precisar se tivesse uma api com endpoint login
     // aqui fiz só uma fake api com crud
-    data.forEach(e => 
-      (e.name == user.name && e.password == user.password) ?
-      userApiData = e : ''
-      );
+    userApiData = data.filter(e => 
+      (e.name == user.name && e.password == user.password))
 
-    commit('login', userApiData)
+    userApiData.length !== 0 
+    ? commit('login', userApiData[0])
+    : commit('alert', {
+      type: 'error',
+      message: 'User not found'
+    })
 	},
 
   loginAsGuest({commit}, user) {
@@ -41,5 +44,8 @@ export default {
 
   logout({commit}) {
 		commit('logout')
-	}
+	},
+  closeAlert({commit}) {
+    commit('closeAlert')
+  }
 }

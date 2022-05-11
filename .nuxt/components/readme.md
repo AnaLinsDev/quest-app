@@ -10,6 +10,7 @@ You can directly use them in pages and other components without the need to impo
 - `<ChartsFinalQuestDashRight>` | `<charts-final-quest-dash-right>` (components/charts-final/quest-dash-right.vue)
 - `<ChartsSchemaDoughnut>` | `<charts-schema-doughnut>` (components/charts-schema/doughnut.vue)
 - `<ChartsSchemaPie>` | `<charts-schema-pie>` (components/charts-schema/pie.vue)
+- `<CommonAlert>` | `<common-alert>` (components/common/alert.vue)
 - `<CommonMenu>` | `<common-menu>` (components/common/menu.vue)
 - `<CommonSideBar>` | `<common-side-bar>` (components/common/side-bar.vue)
 - `<UserLoginForm>` | `<user-login-form>` (components/user/login-form.vue)

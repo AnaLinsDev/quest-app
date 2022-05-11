@@ -2,43 +2,50 @@
   {
     "name": "configQuiz",
     "path": "/configQuiz",
-    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\configQuiz.vue",
-    "chunkName": "pages/configQuiz"
+    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest-app\\\\pages\\\\configQuiz.vue",
+    "chunkName": "pages/configQuiz",
+    "_name": "_0d8bdc7c"
   },
   {
     "name": "dashboard",
     "path": "/dashboard",
-    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\dashboard.vue",
-    "chunkName": "pages/dashboard"
+    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest-app\\\\pages\\\\dashboard.vue",
+    "chunkName": "pages/dashboard",
+    "_name": "_a6c4824e"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\login.vue",
-    "chunkName": "pages/login"
+    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest-app\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_cac9a0a4"
   },
   {
     "name": "quests",
     "path": "/quests",
-    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\quests.vue",
-    "chunkName": "pages/quests"
+    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest-app\\\\pages\\\\quests.vue",
+    "chunkName": "pages/quests",
+    "_name": "_46f9415c"
   },
   {
     "name": "register",
     "path": "/register",
-    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\register.vue",
-    "chunkName": "pages/register"
+    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest-app\\\\pages\\\\register.vue",
+    "chunkName": "pages/register",
+    "_name": "_6f82a26e"
   },
   {
     "name": "userInfo",
     "path": "/userInfo",
-    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\userInfo.vue",
-    "chunkName": "pages/userInfo"
+    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest-app\\\\pages\\\\userInfo.vue",
+    "chunkName": "pages/userInfo",
+    "_name": "_9bbba038"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\quest-app-total\\\\quest-app\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest-app\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_5e18e6d2"
   }
 ]

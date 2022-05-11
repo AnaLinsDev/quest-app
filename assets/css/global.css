@@ -3,5 +3,24 @@ body{
 }
 
 .v-main__wrap{
-  background-color: whitesmoke !important;
+  background-color:rgba(197, 4, 197, 0.801) !important;
+}
+
+.title_quiz {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 50px !important;
+  font-family: 'Nova Round', cursive;
+}
+
+.purle_btn {
+  background-color: rgba(233, 134, 233, 0.801) !important;
+  color: black;
+  border: 1px solid black;
+}
+
+.orange_btn {
+  background-color: rgba(247, 224, 24, 0.801) !important;
+  color: black;
+  border: 1px solid black;
 }

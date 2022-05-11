@@ -31,15 +31,14 @@
 
         <v-btn
           :disabled="!valid"
-          color="success"
-          class="mr-4"
+          class="mr-4 purle_btn"
           @click="registerUser"
         >
           register
         </v-btn>
 
         <v-btn
-            color="warning"
+            class="orange_btn"
             to="/login"
           >
             go to login

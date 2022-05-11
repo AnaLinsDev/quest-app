@@ -25,9 +25,8 @@
 
         <v-btn
           :disabled="!setValid"
-          color="success"
           v-if="!isGuest"
-          class="mr-4"
+          class="mr-4 purle_btn"
           @click="loginUser"
         >
           Login
@@ -36,8 +35,7 @@
         <v-btn
           v-else
           :disabled="!setValidGuest"
-          color="success"
-          class="mr-4"
+          class="mr-4 purle_btn"
           @click="loginUser"
         >
           Login as a guest
@@ -47,7 +45,7 @@
 
         <div>
           <v-btn
-            color="warning"
+            class="orange_btn"
             to="/register"
           >
             Register
@@ -55,7 +53,7 @@
 
           <v-btn
             v-if="!isGuest"
-            color="warning"
+            class="orange_btn"
             @click="setLoginGuest"
           >
             Login as a guest
@@ -63,7 +61,7 @@
           
           <v-btn
             v-else
-            color="warning"
+            class="orange_btn"
             @click="setLoginGuest"
           >
             Login as a user

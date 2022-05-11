@@ -1,11 +1,14 @@
 <template>
   <div>
-    <h1 class="center">User info</h1>
+    <h1 class="center">Profile</h1>
     <div class="main-userInfo">
-      <div class="card-userInfo">
+      <div v-if="token !== 'guestIdHolder'" class="card-userInfo">
         <h2>Token: {{token}}</h2>
         <h2>Name: {{name}}</h2>
         <h2>Email: {{email}}</h2>
+      </div>
+      <div v-else class="card-userInfo">
+        <h2>Name: {{name}}</h2>
       </div>
     </div>
   </div>

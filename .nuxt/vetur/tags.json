@@ -11,6 +11,9 @@
   "ChartsSchemaPie": {
     "description": "Auto imported from components/charts-schema/pie.vue"
   },
+  "CommonAlert": {
+    "description": "Auto imported from components/common/alert.vue"
+  },
   "CommonMenu": {
     "description": "Auto imported from components/common/menu.vue"
   },
