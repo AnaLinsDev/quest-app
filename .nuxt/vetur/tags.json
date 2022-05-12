@@ -5,12 +5,6 @@
   "ChartsFinalQuestDashRight": {
     "description": "Auto imported from components/charts-final/quest-dash-right.vue"
   },
-  "ChartsSchemaDoughnut": {
-    "description": "Auto imported from components/charts-schema/doughnut.vue"
-  },
-  "ChartsSchemaPie": {
-    "description": "Auto imported from components/charts-schema/pie.vue"
-  },
   "CommonAlert": {
     "description": "Auto imported from components/common/alert.vue"
   },
@@ -25,5 +19,11 @@
   },
   "UserRegisterForm": {
     "description": "Auto imported from components/user/register-form.vue"
+  },
+  "ChartsSchemaDoughnut": {
+    "description": "Auto imported from components/charts-schema/doughnut.vue"
+  },
+  "ChartsSchemaPie": {
+    "description": "Auto imported from components/charts-schema/pie.vue"
   }
 }

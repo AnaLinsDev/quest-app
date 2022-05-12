@@ -18,7 +18,7 @@ export default {
       (e.name == user.name && e.password == user.password))
 
     userApiData.length !== 0 
-    ? commit('login', userApiData[0])
+    ? commit('login', userApiData[0]   )
     : commit('alert', {
       type: 'error',
       message: 'User not found'
@@ -27,6 +27,8 @@ export default {
 
   loginAsGuest({commit}, user) {
 		commit('loginAsGuest', user)
+
+    
 	},
 
   async register({commit}, user) {
