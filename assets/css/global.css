@@ -3,7 +3,7 @@ body{
 }
 
 .v-main__wrap{
-  background-color:rgba(197, 4, 197, 0.801) !important;
+  background-image: linear-gradient(to right, rgb(51, 69, 235) , rgb(23, 20, 187));
 }
 
 .title_quiz {
@@ -14,7 +14,7 @@ body{
 }
 
 .purle_btn {
-  background-color: rgba(233, 134, 233, 0.801) !important;
+  background-color: rgba(51, 137, 235, 0.74) !important;
   color: black;
   border: 1px solid black;
 }

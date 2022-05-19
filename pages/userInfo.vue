@@ -1,14 +1,12 @@
 <template>
   <div>
-    <h1 class="center">Profile</h1>
     <div class="main-userInfo">
-      <div v-if="token !== 'guestIdHolder'" class="card-userInfo">
-        <h2>Token: {{token}}</h2>
-        <h2>Name: {{name}}</h2>
-        <h2>Email: {{email}}</h2>
-      </div>
-      <div v-else class="card-userInfo">
-        <h2>Name: {{name}}</h2>
+      <div class="card-userInfo pa-5">
+        <h1 class="center">Profile</h1>
+        <v-divider class="my-2"></v-divider>
+        <h2 v-if="token !== ''">Token: {{token}}</h2>
+        <h2 v-if="name">Name: {{name}}</h2>
+        <h2 v-if="email">Email: {{email}}</h2>
       </div>
     </div>
   </div>
@@ -32,14 +30,11 @@ export default {
   .main-userInfo{
     display: flex;
     justify-content: center;
-    margin: 80px auto;
   }
   .card-userInfo{
     height: auto;
     width: 500px;
-    padding: 50px 100px;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0 0 1em rgb(202, 200, 200);
   }
 </style>

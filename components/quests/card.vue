@@ -1,13 +1,78 @@
 <template>
-  <Card />
+  <div class="main-quest ">
+    <div class="card-quest d-flex-column" :class="currentQuest.difficulty">
+      <div class="card-quest-info" >
+        <p>{{ currentQuest.category }}</p>
+        <p :class="currentQuest.difficulty">{{ currentQuest.difficulty }}</p>
+        <v-spacer></v-spacer>
+        <p>Question {{ questNumber}} / {{quests.length }}</p>
+      </div>
+    <div>
+      <div class="btn-answers">
+        <v-container>
+          <v-row>
+            <v-col cols="12">
+              <h2 class="quest">{{ currentQuest.question }}</h2>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col
+            cols="12"
+            sm="6"
+            v-for="(ans,index) in getListAnswers"
+            :key="index"
+            >
+            <div :class="{
+                right: isAnswered && answerTrue == ans , 
+                wrong: isAnswered && answerTrue != ans,
+                selected: isAnswered && answerFinal == ans
+                }"
+              class="button-answer quest"
+              @click="selectAnswer(ans)">
+              {{ ans }}
+              </div>
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
+    </div>
+
+    <div class="container-btns mt-10">
+       <v-spacer></v-spacer>
+       <v-btn
+        v-if="quests.length > questNumber"
+        depressed
+        :disabled="answerFinal === ''"
+        large
+        color="primary"
+        @click="nextQuest()"
+      >
+        Next
+        <v-icon>
+          mdi-arrow-right
+        </v-icon>
+      </v-btn>
+
+      <v-btn
+        v-if="quests.length == questNumber"
+        depressed
+        :disabled="answerFinal === ''"
+        large
+        color="primary"
+        to="/dashboard"
+      >
+        Finish
+      </v-btn>
+    </div>
+    </div>
+
+  </div>
 </template>
 
 <script>
 import {mapState, mapActions} from 'vuex'
-import Card from '@/components/quests/card.vue'
 
 export default {
-  components: { Card },
 
   data(){
     return{
@@ -81,18 +146,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
-  
+
   .main-quest{
     display: flex;
     justify-content: center;
-    margin: 40px auto;
+    margin: auto;
     font-family: 'Roboto Mono', monospace;
+    color: black !important;
   }
 
   .card-quest{
-    height: auto;
+    height: 100%;
     width: 70vw;
     min-height: 500px;
     padding: 50px;
@@ -111,28 +178,15 @@ export default {
     border-radius: 20px;
   }
 
-  .question{
-    height: 300px;
+  .quest{
+    color: rgba(0, 0, 0, 0.87);
   }
 
   .btn-answers {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
-    color: white;
     align-items: center;
-  }
-
-  .btn-answers .theme--light.v-btn.v-btn--has-bg{
-    background-color: whitesmoke;
-    border: 1px solid black;
-  }
-
-  .container-btns{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
   }
 
   p.easy {
@@ -170,14 +224,8 @@ export default {
     to { transform: rotateY(0deg); }
   }
 
-  button{
-    position: fixed;
-    bottom: 0px;
-    right: 0px; 
-  }
-
   button:active{
-    animation: loading 2s linear infinite;
+    animation: loading 3s linear infinite;
   }
 
   .right{
@@ -192,8 +240,30 @@ export default {
     border: none;
   }
 
+
   .selected{
     opacity: 1 !important;
   }
 
+  .button-answer {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 650px) {
+    .card-quest{
+      width: 100vw !important;
+      margin: 0 !important;
+    }
+    .main-quest {
+      font-size: 80%;
+    }
+    button {
+      font-size: 80% !important;
+    }
+  }
 </style>

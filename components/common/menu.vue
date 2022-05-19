@@ -31,12 +31,12 @@
       <v-toolbar-title>Quiz App</v-toolbar-title>
       <v-spacer></v-spacer>
 
-      <v-btn icon color="purple darken-2"
+      <v-btn icon color="blue"
       to="/configQuiz">
         <v-icon>mdi-cog-play</v-icon>
       </v-btn>
 
-      <v-btn icon color="purple darken-2"
+      <v-btn icon color="blue"
       to="/userInfo">
         <v-icon>mdi-account</v-icon>
       </v-btn>

@@ -20,6 +20,3 @@ export default {
 components: {Menu, SideBar, Alert}
 }
 </script>
-
-<style>
-</style>

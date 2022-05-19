@@ -1,202 +1,126 @@
 <template>
-  <div>
+  <div class="d-flex-column geral">
+    <div class="form-quiz-config mx-auto mt-12">
+      <div class="card-quiz-config pa-10">
+        <h1 class="center">Configuration Quiz</h1>
+        <v-divider class="my-2"></v-divider>
+        <v-container class="pt-6">
+          <v-row align="center">
+            <v-col class="d-flex" cols="12" sm="6">
+              <v-select
+                :items="configOptions[0][1]"
+                v-model="amount"
+                outlined
+                rounded
+                label="Amount"
+              ></v-select>
+            </v-col>
 
-    <h1 class="center">
-      <span v-if="!userConfig"> Configuration Quiz</span> 
-      <span v-else > User Configuration Quiz</span> 
-    </h1>
-
-    <div class="resume-quiz-config">
-      <h2>Amount: {{configChanged.amount}}</h2>
-      <h2>Category: {{configChanged.category}}</h2>
-      <h2>Difficulty: {{configChanged.difficulty}}</h2>
-      <h2>Type: {{configChanged.type}}</h2>
-    </div>
-
-    <div class="form-quiz-config">
-      <div class="card-quiz-config">
-        <v-container fluid>
-            <v-row align="center">
-              <v-col
-                class="d-flex"
-                cols="12"
-                sm="6"
-              >
-                <v-select
-                  :items="configOptions[0][1]"
-                  v-model="amount"
-                  filled
-                  label="Amount"
-                ></v-select>
-              </v-col>
-
-              <v-col
-                class="d-flex"
-                cols="12"
-                sm="6"
-              >
-                <v-select
-                  :items="Object.keys(configOptions[1][1])"
-                  v-model="category"
-                  filled
-                  label="Category"
-                ></v-select>
-              </v-col>
-
-              <v-col
-                class="d-flex"
-                cols="12"
-                sm="6"
-              >
-                <v-select
-                  :items="Object.keys(configOptions[3][1])"
-                  v-model="type"
-                  filled
-                  label="Type"
-                ></v-select>
-              </v-col>
-
-              <v-col
-                class="d-flex"
-                cols="12"
-                sm="6"
-              >
-                <v-select
-                  :items="Object.keys(configOptions[2][1])"
-                  v-model="difficulty"
-                  filled
-                  label="Difficulty"
-                ></v-select>
-              </v-col>
-            </v-row>
-          </v-container>
-
-      <v-btn
-        tile
-        @click="generateQuestions"
-        color="success">
-
-        <v-icon left>
-          mdi-creation
-        </v-icon>
-
-        Generate
-      </v-btn>
+            <v-col class="d-flex" cols="12" sm="6">
+              <v-select
+                :items="Object.keys(configOptions[1][1])"
+                v-model="category"
+                outlined
+                rounded
+                label="Category"
+              ></v-select>
+            </v-col>
+            <v-col class="d-flex" cols="12" sm="6">
+              <v-select
+                :items="Object.keys(configOptions[3][1])"
+                v-model="type"
+                outlined
+                rounded
+                label="Type"
+              ></v-select>
+            </v-col>
+            <v-col class="d-flex" cols="12" sm="6">
+              <v-select
+                :items="Object.keys(configOptions[2][1])"
+                v-model="difficulty"
+                outlined
+                rounded
+                label="Difficulty"
+              ></v-select>
+            </v-col>
+          </v-row>
+        </v-container>
+        <div class="d-flex justify-center mb-3">
+          <v-btn @click="generateQuestions" large rounded color="blue">
+            <v-icon left color="white"> mdi-creation </v-icon>
+            Generate
+          </v-btn>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import {mapState, mapActions} from 'vuex'
+import { mapState, mapActions } from "vuex";
 
 export default {
-
-  data(){
-    return{
+  data() {
+    return {
       amount: 5,
-      type:"Any",
-      difficulty:"Any",
-      category:"Any",
-    }
+      type: "Any",
+      difficulty: "Any",
+      category: "Any",
+    };
   },
 
-  computed:{
-    ...mapState('quiz',{
-    userConfig: state => state.isUserConfig,
-    config: state => state.config,
-    configOptions: state => state.list_config
+  computed: {
+    ...mapState("quiz", {
+      config: (state) => state.config,
+      configOptions: (state) => state.list_config,
     }),
-  
-    configChanged(){
-      this.amount != '' || this.type != 'Any' ||
-      this.difficulty != 'Any' || this.category != 'Any' ?
-
-      this.setCurrentConfig({
-        amount: this.amount, 
-        difficulty: this.difficulty,
-        category: this.category, 
-        type: this.type
-      }) : ''
-
-      return {
-        amount: this.amount, 
-        difficulty: this.difficulty,
-        category: this.category, 
-        type: this.type
-      }
-    }
   },
 
-  methods:{
-    ...mapActions('quiz',
-    ['getConfigOptions', 'setConfig', 'povoateQuests']),
-    
-    async povoateQuizOptions(){
-      await this.getConfigOptions()
+  methods: {
+    ...mapActions("quiz", ["getConfigOptions", "setConfig", "povoateQuests"]),
+
+    async povoateQuizOptions() {
+      await this.getConfigOptions();
     },
 
-    async setCurrentConfig(config){
-      await this.setConfig({
-        amount: config.amount, 
-        difficulty: config.difficulty,
-        category: config.category, 
-        type: config.type
-      })
-    },
-
-    async generateQuestions(){
+    async generateQuestions() {
       await this.povoateQuests({
-        amount: this.amount, 
+        amount: this.amount,
         difficulty: this.difficulty,
-        category: this.category, 
-        type: this.type
-      })
-      this.$router.push('/quests')
-    }
+        category: this.category,
+        type: this.type,
+      });
+      this.$router.push("/quests");
+    },
   },
 
-  async mounted(){
-    await this.povoateQuizOptions()
-  }
-}
+  async mounted() {
+    await this.povoateQuizOptions();
+  },
+};
 </script>
 
 <style>
-  .center{
-    text-align: center;
-  }
-  .resume-quiz-config{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-    height: auto;
-    margin: 30px 100px;
-    padding: 20px 80px;
-    background-color: white;
-    border: 1px solid black;
-  }
+.center {
+  text-align: center;
+}
+.black {
+  color: black;
+}
 
-  .form-quiz-config{
-    display: flex;
-    justify-content: center;
-    margin: 80px auto;
-  }
+.form-quiz-config {
+  display: flex;
+  justify-content: center;
+}
 
-  .card-quiz-config{
-    height: auto;
-    width: 1000px;
-    padding: 50px 100px;
-    background-color: white;
-    border: 1px solid black;
-  }
+.geral {
+  justify-content: center;
+}
 
-  @media (max-width: 600px){
-    .resume-quiz-config{
-      margin: 0px;
-      padding: 10px;
-    }
-  }
-
+.card-quiz-config {
+  height: auto;
+  max-width: 600px;
+  background-color: white;
+  border: 1px solid black;
+}
 </style>

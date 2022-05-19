@@ -1,17 +1,15 @@
 export default {
-  
-	login(state, user) {
-    console.log(user)
+  login(state, user) {
     state.name = user.name
     state.email = user.email
     state.token = user.id
     state.isGuest = false
     state.loggedIn = true
-	},
+  },
 
   loginAsGuest(state, user) {
     state.name = user.name
-    state.token = 'guestIdHolder'
+    state.token = ''
     state.isGuest = true
     state.loggedIn = true
   },

@@ -4,13 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0d8bdc7c = () => interopDefault(import('..\\pages\\configQuiz.vue' /* webpackChunkName: "pages/configQuiz" */))
-const _a6c4824e = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
-const _cac9a0a4 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
-const _46f9415c = () => interopDefault(import('..\\pages\\quests.vue' /* webpackChunkName: "pages/quests" */))
-const _6f82a26e = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
-const _9bbba038 = () => interopDefault(import('..\\pages\\userInfo.vue' /* webpackChunkName: "pages/userInfo" */))
-const _5e18e6d2 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _a4f3db9c = () => interopDefault(import('..\\pages\\configQuiz.vue' /* webpackChunkName: "pages/configQuiz" */))
+const _5797f069 = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
+const _350ca93e = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _0a920c68 = () => interopDefault(import('..\\pages\\quests.vue' /* webpackChunkName: "pages/quests" */))
+const _2ab3fede = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
+const _6d538c54 = () => interopDefault(import('..\\pages\\userInfo.vue' /* webpackChunkName: "pages/userInfo" */))
 
 const emptyFn = () => {}
 
@@ -25,32 +24,28 @@ export const routerOptions = {
 
   routes: [{
     path: "/configQuiz",
-    component: _0d8bdc7c,
+    component: _a4f3db9c,
     name: "configQuiz"
   }, {
     path: "/dashboard",
-    component: _a6c4824e,
+    component: _5797f069,
     name: "dashboard"
   }, {
     path: "/login",
-    component: _cac9a0a4,
+    component: _350ca93e,
     name: "login"
   }, {
     path: "/quests",
-    component: _46f9415c,
+    component: _0a920c68,
     name: "quests"
   }, {
     path: "/register",
-    component: _6f82a26e,
+    component: _2ab3fede,
     name: "register"
   }, {
     path: "/userInfo",
-    component: _9bbba038,
+    component: _6d538c54,
     name: "userInfo"
-  }, {
-    path: "/",
-    component: _5e18e6d2,
-    name: "index"
   }],
 
   fallback: false

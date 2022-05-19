@@ -14,16 +14,19 @@
   "CommonSideBar": {
     "description": "Auto imported from components/common/side-bar.vue"
   },
-  "UserLoginForm": {
-    "description": "Auto imported from components/user/login-form.vue"
-  },
-  "UserRegisterForm": {
-    "description": "Auto imported from components/user/register-form.vue"
+  "QuestsCard": {
+    "description": "Auto imported from components/quests/card.vue"
   },
   "ChartsSchemaDoughnut": {
     "description": "Auto imported from components/charts-schema/doughnut.vue"
   },
   "ChartsSchemaPie": {
     "description": "Auto imported from components/charts-schema/pie.vue"
+  },
+  "UserLoginForm": {
+    "description": "Auto imported from components/user/login-form.vue"
+  },
+  "UserRegisterForm": {
+    "description": "Auto imported from components/user/register-form.vue"
   }
 }

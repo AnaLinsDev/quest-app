@@ -23,7 +23,6 @@
   }
   .login-card {
     background-color: white;
-    border-radius: 20px;
   }
 
 </style>

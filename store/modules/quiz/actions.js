@@ -1,5 +1,5 @@
 const axios = require('axios');
-const url = 'http://localhost:3000'
+const url = 'http://localhost:5000'
 
 export default {
   async getConfigOptions({commit}) {

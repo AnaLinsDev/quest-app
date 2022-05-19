@@ -56,7 +56,6 @@ export default {
     width: 80%;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0 0 1em rgb(202, 200, 200);
   }
 
   .dashboard-info{
