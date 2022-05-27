@@ -7,10 +7,9 @@
         lazy-validation
       >
         <v-text-field
-          v-model.trim="username"
-          :counter="10"
-          :rules="usernameRules"
-          label="Username"
+          v-model.trim="email"
+          :rules="emailRules"
+          label="Email"
           required
         ></v-text-field>
 
@@ -79,12 +78,11 @@
     data: () => ({
       isGuest: false,
       valid: true,
-      password: '12345', 
-      username: 'Ana',
+      password: '123456', 
+      email: 'wintes@email.com',
 
-      usernameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+      emailRules: [
+        v => !!v || 'Email is required'
       ],
 
       passwordRules: [
@@ -96,11 +94,11 @@
 
     computed:{
       setValid(){
-        return this.password.trim() == "" || this.username.trim() == "" 
+        return this.password.trim() == "" || this.email.trim() == "" 
         ? false : true
       },
       setValidGuest(){
-        return this.username.trim() == "" 
+        return this.email.trim() == "" 
         ? false : true
       }
     },
@@ -110,12 +108,12 @@
       async loginUser(){ 
         if(this.isGuest){  
           await this.loginAsGuest({ 
-            name: this.username 
+            email: this.email 
           })
         }
         else{
           await this.login({
-            name: this.username,
+            email: this.email,
             password: this.password
           })
         }

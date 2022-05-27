@@ -56,7 +56,7 @@
       registerAsGuest: false,
       valid: true,
 
-      password: 'tests', 
+      password: '123456', 
       username: 'test',
       email: 'test@gmail.com',
 
@@ -79,7 +79,7 @@
       async registerUser () {
         this.$refs.form.validate()
         await this.register({
-          name: this.username,
+          nickname: this.username,
           email: this.email,
           password: this.password
         })

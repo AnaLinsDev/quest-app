@@ -6,9 +6,10 @@
         <v-divider class="my-2"></v-divider>
         <v-container class="pt-6">
           <v-row align="center">
+
             <v-col class="d-flex" cols="12" sm="6">
               <v-select
-                :items="configOptions[0][1]"
+                :items="configOptions['amount']"
                 v-model="amount"
                 outlined
                 rounded
@@ -18,31 +19,34 @@
 
             <v-col class="d-flex" cols="12" sm="6">
               <v-select
-                :items="Object.keys(configOptions[1][1])"
+                :items="Object.keys(configOptions['category'])"
                 v-model="category"
                 outlined
                 rounded
                 label="Category"
               ></v-select>
             </v-col>
+
             <v-col class="d-flex" cols="12" sm="6">
               <v-select
-                :items="Object.keys(configOptions[3][1])"
+                :items="Object.keys(configOptions['type'])"
                 v-model="type"
                 outlined
                 rounded
                 label="Type"
               ></v-select>
             </v-col>
+
             <v-col class="d-flex" cols="12" sm="6">
               <v-select
-                :items="Object.keys(configOptions[2][1])"
+                :items="Object.keys(configOptions['difficulty'])"
                 v-model="difficulty"
                 outlined
                 rounded
                 label="Difficulty"
               ></v-select>
             </v-col>
+            
           </v-row>
         </v-container>
         <div class="d-flex justify-center mb-3">
@@ -72,30 +76,25 @@ export default {
   computed: {
     ...mapState("quiz", {
       config: (state) => state.config,
-      configOptions: (state) => state.list_config,
+      configOptions: (state) => state.quest_config,
     }),
+  },
+  created() {
+    console.log(this.configOptions['category']['Art'])
   },
 
   methods: {
-    ...mapActions("quiz", ["getConfigOptions", "setConfig", "povoateQuests"]),
-
-    async povoateQuizOptions() {
-      await this.getConfigOptions();
-    },
+    ...mapActions("quiz", ["setConfig", "povoateQuests"]),
 
     async generateQuestions() {
       await this.povoateQuests({
         amount: this.amount,
         difficulty: this.difficulty,
-        category: this.category,
+        category: this.configOptions['category'][this.category],
         type: this.type,
       });
       this.$router.push("/quests");
     },
-  },
-
-  async mounted() {
-    await this.povoateQuizOptions();
   },
 };
 </script>

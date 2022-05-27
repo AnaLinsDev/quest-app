@@ -1,6 +1,6 @@
 export default {
   login(state, user) {
-    state.name = user.name
+    state.name = user.nickname
     state.email = user.email
     state.token = user.id
     state.isGuest = false

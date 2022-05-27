@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="main-userInfo">
       <div class="card-userInfo pa-5">
         <h1 class="center">Profile</h1>
@@ -9,7 +8,6 @@
         <h2 v-if="email">Email: {{email}}</h2>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
