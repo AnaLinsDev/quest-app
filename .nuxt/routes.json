@@ -3,49 +3,42 @@
     "name": "configQuiz",
     "path": "/configQuiz",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest game\\\\quest-app\\\\pages\\\\configQuiz.vue",
-    "chunkName": "pages/configQuiz",
-    "_name": "_a4f3db9c"
+    "chunkName": "pages/configQuiz"
   },
   {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest game\\\\quest-app\\\\pages\\\\dashboard.vue",
-    "chunkName": "pages/dashboard",
-    "_name": "_5797f069"
+    "chunkName": "pages/dashboard"
   },
   {
     "name": "history",
     "path": "/history",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest game\\\\quest-app\\\\pages\\\\history.vue",
-    "chunkName": "pages/history",
-    "_name": "_2a1815a9"
+    "chunkName": "pages/history"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest game\\\\quest-app\\\\pages\\\\login.vue",
-    "chunkName": "pages/login",
-    "_name": "_350ca93e"
+    "chunkName": "pages/login"
   },
   {
     "name": "quests",
     "path": "/quests",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest game\\\\quest-app\\\\pages\\\\quests.vue",
-    "chunkName": "pages/quests",
-    "_name": "_0a920c68"
+    "chunkName": "pages/quests"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest game\\\\quest-app\\\\pages\\\\register.vue",
-    "chunkName": "pages/register",
-    "_name": "_2ab3fede"
+    "chunkName": "pages/register"
   },
   {
     "name": "userInfo",
     "path": "/userInfo",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Linkedin\\\\quest game\\\\quest-app\\\\pages\\\\userInfo.vue",
-    "chunkName": "pages/userInfo",
-    "_name": "_6d538c54"
+    "chunkName": "pages/userInfo"
   }
 ]

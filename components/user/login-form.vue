@@ -104,7 +104,7 @@
     },
 
     methods: {
-      ...mapActions('user',['login', 'loginAsGuest']),
+      ...mapActions('user',['login', 'loginAsGuest', 'alert']),
       async loginUser(){ 
         if(this.isGuest){  
           await this.loginAsGuest({ 
@@ -116,6 +116,7 @@
             email: this.email,
             password: this.password
           })
+          .catch(err => this.alert({message: err.response.data.message, type: 'error'}))
         }
         this.$router.push('/configQuiz')
       },

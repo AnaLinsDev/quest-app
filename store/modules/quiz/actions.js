@@ -12,8 +12,7 @@ export default {
 	},
 
   async povoateQuests({commit}, configFinal){
-    console.log(configFinal)
-    await axios.post(`${url}/games/quests/generate`, { ...configFinal })
+    return await axios.post(`${url}/games/quests/generate`, { ...configFinal })
     .then(
       (resp) => { commit('povoateQuests', resp.data) },
       (error) => { console.error(error) },

@@ -10,13 +10,19 @@
     <h2 class="center">My History</h2>
 
       <v-card
-        class="d-flex ma-5 pa-5"
+        class="d-flex flex-wrap ma-5 pa-5"
         v-for="(game, key) in userHistory"
         :color="game.result ? 'success' : 'error'"
         :key="key"
       >
-        <h3 v-if="game.result">You Won</h3>
-        <h3 v-else>You Lost</h3>
+        <h3 v-if="game.result">
+          <v-icon large class="mr-4" color="black">mdi-robot-love</v-icon>
+          You Won
+        </h3>
+        <h3 v-else>
+          <v-icon large class="mr-4" color="black">mdi-robot-dead</v-icon>
+          You Lost
+        </h3>
         <v-spacer></v-spacer>
         <h3>{{ dateFormated(game.date) }}</h3>
       </v-card>

@@ -4,10 +4,9 @@ const url = 'http://localhost:5000'
 
 export default {
   async login({ commit }, user) {
-    await axios.post(`${url}/login`, { ...user })
+    return axios.post(`${url}/login`, { ...user })
       .then(
-        (resp) => { commit('login', resp.data) },
-        (error) => { console.error(error) },
+        (resp) => { commit('login', resp.data) }
       )
   },
 
@@ -16,16 +15,19 @@ export default {
   },
 
   async register({ commit }, user) {
-    await axios.post(`${url}/users`, { ...user })
-      .then(
-        (resp) => { commit('register', resp.data) },
-        (error) => { console.error(error) },
+    return await axios.post(`${url}/users`, { ...user }).then(
+        (resp) => { commit('register', resp.data) }
       )
   },
 
   logout({ commit }) {
     commit('logout')
   },
+
+  alert({ commit }, info) {
+    commit('alert', info)
+  },
+
   closeAlert({ commit }) {
     commit('closeAlert')
   },

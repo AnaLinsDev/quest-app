@@ -75,7 +75,8 @@
     }),
 
     methods: {
-      ...mapActions('user', ['register']),
+      ...mapActions('user', ['register', 'alert']),
+
       async registerUser () {
         this.$refs.form.validate()
         await this.register({
@@ -83,6 +84,7 @@
           email: this.email,
           password: this.password
         })
+        .catch(err => this.alert({message: err.response.data.message, type: 'error'}))
         this.$router.push('/configQuiz')
       },
 

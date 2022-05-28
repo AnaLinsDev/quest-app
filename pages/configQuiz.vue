@@ -82,6 +82,7 @@ export default {
 
   methods: {
     ...mapActions("quiz", ["setConfig", "povoateQuests"]),
+    ...mapActions("user", ["alert"]),
 
     async generateQuestions() {
       await this.povoateQuests({
@@ -89,7 +90,7 @@ export default {
         difficulty: this.difficulty,
         category: this.configOptions['category'][this.category],
         type: this.type,
-      });
+      }).catch(err => this.alert({message: err.response.data.message, type: 'error'}) );
       this.$router.push("/quests");
     },
   },

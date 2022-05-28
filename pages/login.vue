@@ -25,4 +25,7 @@
     background-color: white;
   }
 
+  body {
+    background-image: url("@/static/quiz.gif") !important;
+  }
 </style>

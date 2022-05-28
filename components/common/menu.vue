@@ -7,7 +7,7 @@
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
     >
-      <v-icon large class="mr-2" color="orange darken-2" >mdi-puzzle-heart-outline</v-icon>
+      <v-icon large class="mr-2" color="pink darken-2" >mdi-puzzle-heart-outline</v-icon>
       <v-toolbar-title>Quiz Game</v-toolbar-title>
       <v-spacer></v-spacer>
 
@@ -27,7 +27,7 @@
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
     >
-
+      <v-icon large class="mr-2" color="pink darken-2" >mdi-puzzle-heart-outline</v-icon>
       <v-toolbar-title>Quiz App</v-toolbar-title>
       <v-spacer></v-spacer>
 

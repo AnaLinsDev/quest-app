@@ -10,7 +10,7 @@
       <h1>{{ resultMessage }}</h1>
       <div class="">
         <v-progress-linear
-          v-model="percentage"
+          :value="percentage"
           :color="isWon ? 'success' : 'red  darken-2'"
           height="25"
         >

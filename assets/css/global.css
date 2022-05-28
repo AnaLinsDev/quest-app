@@ -3,7 +3,8 @@ body{
 }
 
 .v-main__wrap{
-  background-color: rgb(233, 231, 102);
+  background-image: url("@/static/quiz.jpeg");
+  background-size: cover;
 }
 
 .title_quiz {
@@ -11,6 +12,7 @@ body{
   text-align: center;
   font-size: 50px !important;
   font-family: 'Nova Round', cursive;
+  color: white;
 }
 
 .purle_btn {

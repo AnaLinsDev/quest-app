@@ -5,10 +5,13 @@
         <v-divider class="my-2"></v-divider>
         <h3 v-if="name" class="mt-3">Name: {{name}}</h3>
         <h3 v-if="email" class="mt-3">Email: {{email}}</h3>
-        <v-btn class="mt-6" color="success" to="/history">
-          <v-icon left>mdi-controller-classic</v-icon>
-          My History
-        </v-btn>
+        <div class="d-flex">
+          <v-spacer></v-spacer>
+          <v-btn class="mt-6" color="info" to="/history">
+            <v-icon left>mdi-controller-classic</v-icon>
+            My History
+          </v-btn>
+        </div>
       </v-card>
     </div>
 </template>
