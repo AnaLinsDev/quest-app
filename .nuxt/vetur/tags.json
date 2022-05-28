@@ -11,6 +11,12 @@
   "ChartsSchemaPie": {
     "description": "Auto imported from components/charts-schema/pie.vue"
   },
+  "UserLoginForm": {
+    "description": "Auto imported from components/user/login-form.vue"
+  },
+  "UserRegisterForm": {
+    "description": "Auto imported from components/user/register-form.vue"
+  },
   "CommonAlert": {
     "description": "Auto imported from components/common/alert.vue"
   },
@@ -22,11 +28,5 @@
   },
   "QuestsCard": {
     "description": "Auto imported from components/quests/card.vue"
-  },
-  "UserLoginForm": {
-    "description": "Auto imported from components/user/login-form.vue"
-  },
-  "UserRegisterForm": {
-    "description": "Auto imported from components/user/register-form.vue"
   }
 }

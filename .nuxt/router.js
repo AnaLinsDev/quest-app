@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _a4f3db9c = () => interopDefault(import('..\\pages\\configQuiz.vue' /* webpackChunkName: "pages/configQuiz" */))
 const _5797f069 = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
+const _2a1815a9 = () => interopDefault(import('..\\pages\\history.vue' /* webpackChunkName: "pages/history" */))
 const _350ca93e = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
 const _0a920c68 = () => interopDefault(import('..\\pages\\quests.vue' /* webpackChunkName: "pages/quests" */))
 const _2ab3fede = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
@@ -30,6 +31,10 @@ export const routerOptions = {
     path: "/dashboard",
     component: _5797f069,
     name: "dashboard"
+  }, {
+    path: "/history",
+    component: _2a1815a9,
+    name: "history"
   }, {
     path: "/login",
     component: _350ca93e,

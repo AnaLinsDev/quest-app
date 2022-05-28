@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex-column geral">
     <div class="form-quiz-config mx-auto mt-12">
-      <div class="card-quiz-config pa-10">
+      <v-card elevation="10" class="pa-5" max-width="600px">
         <h1 class="center">Configuration Quiz</h1>
         <v-divider class="my-2"></v-divider>
         <v-container class="pt-6">
@@ -52,10 +52,10 @@
         <div class="d-flex justify-center mb-3">
           <v-btn @click="generateQuestions" large rounded color="blue">
             <v-icon left color="white"> mdi-creation </v-icon>
-            Generate
+            <span>Lets Go</span>
           </v-btn>
         </div>
-      </div>
+      </v-card>
     </div>
   </div>
 </template>
@@ -111,12 +111,5 @@ export default {
 
 .geral {
   justify-content: center;
-}
-
-.card-quiz-config {
-  height: auto;
-  max-width: 600px;
-  background-color: white;
-  border: 1px solid black;
 }
 </style>

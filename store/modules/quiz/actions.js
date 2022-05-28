@@ -21,11 +21,14 @@ export default {
   },
 
   async sendGameResult({commit}, result){
-    console.log(result)
     await axios.post(`${url}/games`, { ...result })
     .then(
-      (resp) => { console.log(resp.data) },
+      (resp) => {},
       (error) => { console.error(error) },
     )
-  }
+  },
+
+  getUserHistory({commit}, idUser){
+    return axios.get(`${url}/games/${idUser}`)
+  },
 }

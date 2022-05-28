@@ -1,6 +1,6 @@
 <template>
   <div class="main-quest ">
-    <div class="card-quest d-flex-column" :class="currentQuest.difficulty">
+    <v-card elevation="10" class="pa-6" width="800px" max-width="800px" :class="currentQuest.difficulty">
       <div class="card-quest-info" >
         <p>{{ currentQuest.category }}</p>
         <p :class="currentQuest.difficulty">{{ currentQuest.difficulty }}</p>
@@ -64,8 +64,7 @@
         Finish
       </v-btn>
     </div>
-    </div>
-
+    </v-card>
   </div>
 </template>
 
@@ -156,14 +155,6 @@ export default {
     margin: auto;
     font-family: 'Roboto Mono', monospace;
     color: black !important;
-  }
-
-  .card-quest{
-    height: 100%;
-    width: 70vw;
-    min-height: 500px;
-    padding: 50px;
-    background-color: white;
   }
 
   .card-quest-info{

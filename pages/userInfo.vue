@@ -1,12 +1,15 @@
 <template>
-    <div class="main-userInfo">
-      <div class="card-userInfo pa-5">
+    <div class="d-flex justify-center">
+      <v-card elevation="10" width="600px" max-width="600px" class="card-userInfo pa-5">
         <h1 class="center">Profile</h1>
         <v-divider class="my-2"></v-divider>
-        <h2 v-if="token !== ''">Token: {{token}}</h2>
-        <h2 v-if="name">Name: {{name}}</h2>
-        <h2 v-if="email">Email: {{email}}</h2>
-      </div>
+        <h3 v-if="name" class="mt-3">Name: {{name}}</h3>
+        <h3 v-if="email" class="mt-3">Email: {{email}}</h3>
+        <v-btn class="mt-6" color="success" to="/history">
+          <v-icon left>mdi-controller-classic</v-icon>
+          My History
+        </v-btn>
+      </v-card>
     </div>
 </template>
 
@@ -25,14 +28,10 @@ export default {
   .center{
     text-align: center;
   }
-  .main-userInfo{
-    display: flex;
-    justify-content: center;
-  }
+
   .card-userInfo{
     height: auto;
     width: 500px;
-    background-color: white;
-    border-radius: 20px;
+    background-color: whitesmoke;
   }
 </style>

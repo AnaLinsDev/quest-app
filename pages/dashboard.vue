@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex justify-center">
-    <v-card class="d-flex flex-column pa-8" width="50%" min-width="200px" outlined>
+    <v-card elevation="10" class="d-flex flex-column pa-8" width="600px" max-width="600px" outlined>
       <h1 class="d-flex justify-center">Dashboard</h1>
       <div class="d-flex justify-space-around flex-wrap my-6">
         <h2>Right: {{ progress.right }}</h2>
