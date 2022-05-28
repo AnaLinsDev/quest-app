@@ -4,7 +4,6 @@ const url = 'http://localhost:5000'
 
 export default {
   async login({ commit }, user) {
-    console.log(user)
     await axios.post(`${url}/login`, { ...user })
       .then(
         (resp) => { commit('login', resp.data) },

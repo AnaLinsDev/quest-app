@@ -79,9 +79,6 @@ export default {
       configOptions: (state) => state.quest_config,
     }),
   },
-  created() {
-    console.log(this.configOptions['category']['Art'])
-  },
 
   methods: {
     ...mapActions("quiz", ["setConfig", "povoateQuests"]),

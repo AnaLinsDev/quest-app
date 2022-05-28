@@ -36,7 +36,7 @@
         </v-container>
       </div>
     </div>
-
+    <v-spacer></v-spacer>
     <div class="container-btns mt-10">
        <v-spacer></v-spacer>
        <v-btn

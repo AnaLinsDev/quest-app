@@ -33,9 +33,6 @@ export default {
   },
   
   async mounted () {
-
-    console.log(this.progressdata)
-    
     this.loaded = false
 
     this.data = [

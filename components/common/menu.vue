@@ -36,7 +36,9 @@
         <v-icon>mdi-cog-play</v-icon>
       </v-btn>
 
-      <v-btn icon color="blue"
+      <v-btn
+      v-if="token"
+      icon color="blue"
       to="/userInfo">
         <v-icon>mdi-account</v-icon>
       </v-btn>
@@ -66,7 +68,8 @@
 
   export default {
     computed: mapState('user', {
-      loggedIn: state => state.loggedIn
+      loggedIn: state => state.loggedIn,
+      token: state => state.token
     }),
 
     methods: {

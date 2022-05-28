@@ -11,9 +11,6 @@
   "ChartsSchemaPie": {
     "description": "Auto imported from components/charts-schema/pie.vue"
   },
-  "QuestsCard": {
-    "description": "Auto imported from components/quests/card.vue"
-  },
   "CommonAlert": {
     "description": "Auto imported from components/common/alert.vue"
   },
@@ -22,6 +19,9 @@
   },
   "CommonSideBar": {
     "description": "Auto imported from components/common/side-bar.vue"
+  },
+  "QuestsCard": {
+    "description": "Auto imported from components/quests/card.vue"
   },
   "UserLoginForm": {
     "description": "Auto imported from components/user/login-form.vue"

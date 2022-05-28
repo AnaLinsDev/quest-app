@@ -3,7 +3,7 @@ body{
 }
 
 .v-main__wrap{
-  background-image: linear-gradient(to right, rgb(51, 69, 235) , rgb(23, 20, 187));
+  background-color: rgb(233, 231, 102);
 }
 
 .title_quiz {
@@ -23,4 +23,16 @@ body{
   background-color: rgba(247, 224, 24, 0.801) !important;
   color: black;
   border: 1px solid black;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+.info {
+  color: blue;
 }
